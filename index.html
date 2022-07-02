@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <title>Tres en raya</title>
 </head>
 
 <body>
+    <h1>Tres en raya</h1>
     <div class="main">
         <section class="section">
             <div id="0" class="cuadrado"> </div>
@@ -27,34 +31,44 @@
             <div id="8" class="cuadrado"> </div>
         </section>
     </div>
-    <h1>HAS GANADO</h1>
     <script src="main.js"></script>
 </body>
 
 </html>
 <style>
+    body{
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        font-family: 'Titan One', cursive;
+    }
     .main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
+        gap: 3rem;
+        width: 100%;
     }
 
     .cuadrado {
-        border: solid black 2px;
-        width: 300px;
-        height: 250px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        background-color: #f8c037;
+        box-shadow: 10px 10px 0px black;
+        width:150px;
+        height: 150px;
     }
 
     .section {
         display: flex;
         flex-direction: row;
+        gap: 3rem;
     }
     h1{
-        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 70px;
     }
 </style>
