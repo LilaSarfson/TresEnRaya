@@ -1,7 +1,9 @@
 let cuadricula = document.querySelector(".main");
 let win = false;
 let turno = 0;
+let modalOpen=false;
 let cuadrados = document.querySelectorAll(".cuadrado");
+let closeModal = document.querySelector(".close-modal");
 cuadricula.addEventListener("click", function (e) {
     let currentTarget = e.target.getAttribute("id");
     let changeImg = document.getElementById(currentTarget);
@@ -24,6 +26,18 @@ cuadricula.addEventListener("click", function (e) {
         if (turno >= 3 && !win) {
             checkwin(cuadrados, 1);
             checkwin(cuadrados,2);
+        }
+        if(win){
+           modalOpen=true;
+        }
+        if(modalOpen){
+            document.querySelector(".modal").style.display = "block" ;}
+            else{
+            closeModal.addEventListener("click", function (e){
+                document.querySelector(".modal").style.display = "none" ;
+                win=false;
+                
+            })
         }
     }
     else{
