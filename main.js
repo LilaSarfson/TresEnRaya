@@ -4,6 +4,7 @@ let turno = 0;
 let modalOpen=false;
 let cuadrados = document.querySelectorAll(".cuadrado");
 let closeModal = document.querySelector(".close-modal");
+let buttonReload = document.querySelector(".reload-button");
 cuadricula.addEventListener("click", function (e) {
     let currentTarget = e.target.getAttribute("id");
     let changeImg = document.getElementById(currentTarget);
@@ -44,6 +45,9 @@ cuadricula.addEventListener("click", function (e) {
         return;
     }
     
+})
+buttonReload.addEventListener("click", function (){
+    location.reload();
 })
 
 function isPair(num) {
